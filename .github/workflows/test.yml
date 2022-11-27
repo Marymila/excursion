@@ -21,7 +21,7 @@ jobs:
       run: |
         echo $SEMVER
         case ${GITHUB_REF} in 
-          refs/tags/*)
+          refs/tags/$SEMVER)
           echo "It's build from tag";;
         esac
           echo "It's build not from tag"
