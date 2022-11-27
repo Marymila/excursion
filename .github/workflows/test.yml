@@ -22,9 +22,9 @@ jobs:
         echo $SEMVER
         case ${GITHUB_REF} in 
           refs/heads/test)
-          echo "It's build from tag on Test branch";;
+            echo "It's build from tag on Test branch";;
           refs/heads/main)
-          echo "It's build from tag on main branch";;
+            echo "It's build from tag on main branch";;
           
         esac
         MODIFIED=$(date "+%Y-%m-%dT%H:%MZ")
