@@ -1,0 +1,21 @@
+name: Build-Release
+
+on:
+  release:
+    types: [created]
+
+env:
+  SEMVER: ${{ github.event.release.tag_name }}
+
+jobs:
+  
+  Test:
+    name: get semver
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: get tag
+      run: echo "$env.SEMVER"
