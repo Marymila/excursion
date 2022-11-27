@@ -18,4 +18,12 @@ jobs:
       with:
         fetch-depth: 0
     - name: get tag
-      run: echo $SEMVER
+      run: |
+        echo $SEMVER
+        case ${GITHUB_REF} in 
+          refs/heads/$SEMVER
+          echo "It's build from tag"
+        esac
+          echo "It's build not from tag"
+        
+    
