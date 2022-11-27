@@ -6,7 +6,7 @@ name: Build-Release
 
 on:
   push:
-    branches: main
+    branches: master
 
 env:
   SEMVER: ${{ github.event.release.tag_name }}
