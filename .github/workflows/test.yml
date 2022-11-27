@@ -21,9 +21,15 @@ jobs:
       run: |
         echo $SEMVER
         case ${GITHUB_REF} in 
-          refs/tags/$SEMVER)
-          echo "It's build from tag";;
+          refs/heads/test)
+          echo "It's build from tag on Test branch";;
+          refs/heads/main)
+          echo "It's build from tag on main branch";;
+          *)
+          echo "It's build from tag on Other branch";;
+          
         esac
-          echo "It's build not from tag"
+        MODIFIED=$(date "+%Y-%m-%dT%H:%MZ")
+        echo "::set-output name=MODIFIED::${MODIFIED}"
         
     
