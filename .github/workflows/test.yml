@@ -1,12 +1,8 @@
 name: Build-Release
 
-# on:
-#   release:
-#     types: [created]
-
 on:
-  push:
-    branches: master
+  release:
+    types: [created]
 
 env:
   SEMVER: ${{ github.event.release.tag_name }}
