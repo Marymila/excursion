@@ -24,6 +24,6 @@ jobs:
           refs/tags/$SEMVER)
           echo "It's build from tag";;
         esac
-          echo "It's build not from tag"
+
         
     
