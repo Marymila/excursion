@@ -12,12 +12,15 @@ jobs:
   Test:
     name: get semver
     runs-on: ubuntu-latest
+    outputs:
+      MODIFIED: ${{ steps.envvars.outputs.MODIFIED}}
     steps:
     - name: checkout
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
     - name: get tag
+      id: envvars
       run: |
         echo $SEMVER
         case ${GITHUB_REF} in 
