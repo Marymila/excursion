@@ -24,6 +24,9 @@ jobs:
           refs/tags/$SEMVER)
           echo "It's build from tag";;
         esac
+        MODIFIED=$(date "+%Y-%m-%dT%H:%MZ")
+        echo "::set-output name=MODIFIED::${MODIFIED}"
+        echo "{name}={MODIFIED}" >> $GITHUB_OUTPUT
 
         
     
