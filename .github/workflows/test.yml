@@ -25,7 +25,7 @@ jobs:
         echo $SEMVER
         case ${GITHUB_REF} in 
           refs/tags/$SEMVER)
-          echo "It's build from tag";;
+          echo "It's build from tag, yeah";;
         esac
         MODIFIED=$(date "+%Y-%m-%dT%H:%MZ")
         echo "::set-output name=MODIFIED::${MODIFIED}"
