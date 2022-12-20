@@ -28,7 +28,6 @@ jobs:
           echo "It's build from tag, yeah I see";;
         esac
         MODIFIED=$(date "+%Y-%m-%dT%H:%MZ")
-#echo "::set-output name=MODIFIED::${MODIFIED}"
         echo "{MODIFIED}={MODIFIED}" >> $GITHUB_OUTPUT
 
         
